@@ -3,14 +3,12 @@ package com.epam.mjc.io;
 import java.util.Objects;
 
 public class ProfileDataParser {
-    private String data;
     private String name = null;
     private String email = null;
     private String phone = null;
     private String age = null;
 
     public ProfileDataParser(String data) {
-        this.data = data;
         this.parseData(data);
     }
 

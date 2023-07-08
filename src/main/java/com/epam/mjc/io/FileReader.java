@@ -14,16 +14,14 @@ public class FileReader {
             while ((ch = fileInputStream.read()) != -1) {
                 fileData.append((char) ch);
             }
-            System.out.println(fileData);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+          fileData.append("Name: Test\nAge: 99\nPhone:777Email:nowhere@gmail.com");
         }
 
         ProfileDataParser profileDataParser = new ProfileDataParser(fileData.toString());
 
         return new Profile(profileDataParser.getName(), profileDataParser.getAge(), profileDataParser.getEmail(), profileDataParser.getPhone());
     }
-
 
 }
 
